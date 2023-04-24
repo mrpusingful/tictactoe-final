@@ -1,0 +1,86 @@
+@keyframes movement1 {
+  0%   {width: 1000px;}
+  50%  {width: 1200px;}
+  100% {width: 1000px;}
+}
+
+@keyframes movement2 {
+  0%   {width: 1200px;}
+  50%  {width: 1400px;}
+  100% {width: 1200px;}
+}
+
+.fruits {
+  display: flex;
+  flex-direction: row;
+  padding-top: 0;
+  margin-top: 0;
+  position: relative;
+  
+}
+
+.fruit1, .fruit2 {
+  width: 500px;
+  position: absolute;
+}
+
+.fruit1 {
+  top: -240px;
+  right: -90px;
+  width: 1000px;
+  animation-name: movement1;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+}
+
+.fruit2 {
+  width: 1200px;
+  left: -300px;
+  top: -350px;
+  animation-name: movement2;
+  animation-duration: 50s;
+  animation-iteration-count: infinite;
+}
+
+.legends {
+  position: absolute;
+  width: 300px;
+  left: 45px;
+  bottom: 300px;
+}
+
+@media only screen and (max-width: 800px) {
+  .legends {
+    opacity: 0;
+  }
+  h1 {
+    font-size: 40px;
+  }
+  button {
+    width: 150px;
+    white-space: nowrap;
+    font-size: 15px;
+
+  }
+}
+
+/* confetti */
+
+
+.main {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.board-backdrop {
+  width: 530px;
+  position: absolute;
+}
+
+.confetti {
+  position: absolute;
+  width: 1200px;
+}

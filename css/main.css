@@ -1,0 +1,90 @@
+@keyframes colorAnimation {
+  0% {background-color: #079297;}
+  25% {background-color: rgb(8, 112, 112);}
+  50% {background-color: rgb(5, 61, 61);}
+  75% {background-color: rgb(8, 112, 112);}
+  100% {background-color: #079297;}
+}
+
+body {
+  background-color: #079297;
+  animation-name: colorAnimation;
+  animation-duration: 20s;
+  animation-iteration-count: infinite;
+  height: 80vh;
+  font-family: Arial, Helvetica, sans-serif, cursive;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+  padding-top: 0;
+  overflow: hidden;  
+}
+
+h1 {
+  font-family: "Finger Paint", cursive;
+  text-transform: uppercase;
+  font-size: 70px;
+  color: yellow;
+  padding-bottom: 0;
+  margin-bottom: 0;
+  z-index: 100;
+  white-space: nowrap;
+}
+
+.board {
+  width: 320px;
+  height: 320px;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-rows: repeat(3, 1fr);
+  gap: 6px;
+  z-index: 100;
+}
+
+
+.board:hover {
+  cursor: pointer;
+}
+
+.circle {
+  background-image: url(/images/apple.png); 
+}
+
+.cross {
+  background-image: url(/images/lemon.png);
+ 
+}
+
+.circle,
+.cross {
+  background-size: 110%;
+  background-position: center;
+  background-repeat: no-repeat;
+}
+
+.button-container {
+  display: flex;
+  gap: 10px;
+}
+
+button {
+  width: 200px;
+  height: 50px;
+  padding: 10px 20px;
+  border-radius: 25px;
+  background-color: yellow;
+  color: #050505;
+  border-color: var(--yellow);
+  font-size: 18px;
+  transition: 200ms transform;
+  font-weight: 600;
+  z-index: 900;
+}
+
+button:hover {
+  cursor: pointer;
+  transform: translateY(-2px);
+}
+
